@@ -6,7 +6,7 @@
             @if (isset($record->desa) && $record->desa->logo)
             <img src="{{ Storage::url($record->desa->logo) }}" alt="Logo Desa" class="w-24 h-24">
             @else
-            <img src="{{ asset('images/logo/darma-ayu-logo.png') }}" alt="Logo Desa" class="w-24 h-24"
+            <img src="{{ asset('images/logo/logo_desa_pabuaran-logo.png') }}" alt="Logo Desa" class="w-24 h-24"
                 style="width: 60px; ">
             @endif
         </div>
@@ -103,9 +103,9 @@
             </div>
         </div>
 
-        <p class="mb-2 text-xs">Bahwa benar nama tersebut diatas merupakan warga Desa Toboali Kecamatan Toboali
+        <p class="mb-2 text-xs">Bahwa benar nama tersebut diatas merupakan warga Desa Pabuaran Kecamatan Pabuaran
             Kabupaten
-            Bangka Selatan yang sekarang bertempat tinggal dan atau berdomisili di :</p>
+            Subang yang sekarang bertempat tinggal dan atau berdomisili di :</p>
 
         <div class="identity my-4 text-xs">
             <div class="flex mb-1">

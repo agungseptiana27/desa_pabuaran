@@ -124,7 +124,7 @@
     <div class="kop-surat">
         <div class="kop-logo">
             <div class="kop-logo-text">
-                <img src="{{ asset('images/logo/darma-ayu-logo.png') }}" alt="">
+                <img src="{{ asset('images/logo/logo_desa_pabuaran.png') }}" alt="">
             </div>
         </div>
         <p class="kop-title">PEMERINTAH KABUPATEN SUBANG</p>
@@ -188,13 +188,13 @@
             <div class="identity-row">
                 <div class="identity-label">Alamat</div>
                 <div class="identity-colon">:</div>
-                <div class="identity-value">Kampung Padang Kubur RT/RW. 003/004 Desa Toboali Kecamatan Toboali
+                <div class="identity-value">Kampung Padang Kubur RT/RW. 003/004 Desa Pabuaran Kecamatan Pabuaran
                     Kabupaten Bangka Selatan.</div>
             </div>
         </div>
 
-        <p>Bahwa benar nama tersebut diatas merupakan warga Desa Toboali Kecamatan Toboali Kabupaten Bangka Selatan
-            yang sekarang bertempat tinggal dan atau berdomisili di :</p>
+        <p>Bahwa benar nama tersebut diatas merupakan warga Desa Pabuaran Kecamatan Pabuaran Kabupaten Subang yang
+            sekarang bertempat tinggal dan atau berdomisili di :</p>
 
         <div class="identity">
             <div class="identity-row">

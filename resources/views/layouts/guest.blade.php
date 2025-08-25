@@ -21,7 +21,7 @@
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 bg-gray-100 py-10">
         <div>
             <a href="/">
-                <img src="{{ asset('images/logo/logo_desa.png') }}" alt="Logo Desa" class="w-15 mx-auto mb-5">
+                <img src="{{ asset('images/logo/logo_desa_pabuaran.png') }}" alt="Logo Desa" class="w-15 mx-auto mb-5">
             </a>
         </div>
 

@@ -2,7 +2,7 @@
     @section('title', 'Register | ' . config('app.name'))
 
     <div class="text-center flex flex-col items-center justify-center mb-8">
-        {{-- <img src="{{ asset('images/logo/logo_desa.png') }}" class="w-15 mx-auto mb-5" alt=""> --}}
+        <img src="{{ asset('images/logo/logo_desa_pabuaran.png') }}" class="w-15 mx-auto mb-5" alt="">
         <h2 class="text-3xl font-bold text-gray-800">Pendaftaran Akun</h2>
     </div>
 

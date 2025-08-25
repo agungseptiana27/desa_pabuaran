@@ -34,9 +34,10 @@ class AdminPanelProvider extends PanelProvider
                 'primary' => Color::hex('#2684bb'),
             ])
             ->font('Poppins')
-            // ->brandLogo(asset('images/logo/logo_desa_teks.svg'))
+            ->brandLogo(asset('images/logo/logo_desa_pabuaran.png'))
+            ->brandName("Desa Pabuaran")
             ->brandLogoHeight('2rem')
-            // ->favicon(asset('images/favicon/logo_desa.png'))
+            // ->favicon(asset('images/favicon/logo_desa_pabuaran.png'))
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([

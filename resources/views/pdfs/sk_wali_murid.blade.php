@@ -199,8 +199,8 @@
             </div>
         </div>
 
-        <p>Bahwa benar nama tersebut diatas merupakan warga Desa Toboali Kecamatan Toboali Kabupaten Bangka Selatan
-            yang sekarang bertempat tinggal dan atau berdomisili di :</p>
+        <p>Bahwa benar nama tersebut diatas merupakan warga Desa Pabuaran Kecamatan Pabuaran Kabupaten Subang yang
+            sekarang bertempat tinggal dan atau berdomisili di :</p>
 
         <div class="identity">
             <div class="identity-row">

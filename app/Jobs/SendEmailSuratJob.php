@@ -124,7 +124,7 @@ class SendEmailSuratJob implements ShouldQueue
 
         // Ensure the directory exists
         Storage::disk('public')->makeDirectory($storagePath);
-        $imagePath = public_path('images/logo/darma-ayu-logo.png');
+        $imagePath = public_path('images/logo/logo_desa_pabuaran.png');
         $base64Image = 'data:image/png;base64,' . base64_encode(file_get_contents($imagePath));
 
         $pdf = PDF::loadView($this->getTemplateForSubType($this->surat->sub_surat_type_id), [

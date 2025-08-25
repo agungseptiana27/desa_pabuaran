@@ -4,7 +4,7 @@
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <div class="text-center flex flex-col items-center justify-center mb-8">
-        {{-- <img src="{{ asset('images/logo/logo_desa.png') }}" class="w-15 mx-auto mb-5" alt=""> --}}
+        <img src="{{ asset('images/logo/logo_desa_pabuaran.png') }}" class="w-15 mx-auto mb-5" alt="">
         <h2 class="text-3xl font-bold text-gray-800">Selamat Datang!</h2>
         <p class="text-gray-600 mt-2">Silakan masuk ke akun Anda</p>
     </div>
@@ -43,10 +43,10 @@
             </div>
 
             @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    href="{{ route('password.request') }}">
-                    {{ __('Lupa kata sandi Anda?') }}
-                </a>
+            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                href="{{ route('password.request') }}">
+                {{ __('Lupa kata sandi Anda?') }}
+            </a>
             @endif
 
         </div>
