@@ -22,7 +22,7 @@ class KabarDesaResource extends Resource
     protected static ?string $model = KabarDesaModel::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
-    protected static ?string $navigationGroup = 'Informasi Desa';
+    protected static ?string $navigationGroup = 'Informasi Kabar Desa';
     protected static ?string $navigationLabel = 'Kabar Desa';
     protected static ?string $recordTitleAttribute = 'judul';
     protected static ?string $slug = 'kabar-desa';
@@ -33,7 +33,7 @@ class KabarDesaResource extends Resource
     protected static ?string $navigationGroupLabel = 'Informasi Desa';
     protected static ?string $navigationGroupIcon = 'heroicon-o-newspaper';
     protected static ?string $navigationSortLabel = 'Kabar Desa';
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 4;
     protected static ?string $navigationBadgeTooltip = 'Kabar Desa Draft';
 
     public static function form(Form $form): Form

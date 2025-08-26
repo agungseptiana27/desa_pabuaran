@@ -48,7 +48,7 @@ class PengaduanResource extends Resource
     protected static ?string $navigationGroupIcon = 'heroicon-o-rectangle-group';
     protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-bottom-center-text';
     protected static ?string $navigationBadgeTooltip = 'Pengaduan Pending';
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 5;
 
 
     public static function form(Form $form): Form

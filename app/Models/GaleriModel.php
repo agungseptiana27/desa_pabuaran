@@ -27,7 +27,7 @@ class GaleriModel extends Model
     // Relasi dengan kategori
     public function kategori(): BelongsTo
     {
-        return $this->belongsTo(KategoriGaleriModel::class, 'kategori_id');
+        return $this->belongsTo(KategoriGaleri::class, 'kategori_id');
     }
 
     // Relasi dengan user

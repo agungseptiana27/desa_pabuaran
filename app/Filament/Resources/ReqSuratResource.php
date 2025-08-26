@@ -53,7 +53,7 @@ class ReqSuratResource extends Resource
     protected static ?string $navigationGroupLabel = 'Surat';
     protected static ?string $navigationSortLabel = 'Surat Masuk';
     protected static ?string $navigationGroupSortLabel = 'Surat Masuk';
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 2;
     protected static ?string $navigationBadgeTooltip = 'Surat Masuk Pending';
 
     public static function form(Form $form): Form

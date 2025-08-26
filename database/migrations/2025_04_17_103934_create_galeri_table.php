@@ -26,7 +26,7 @@ return new class extends Migration
             $table->text('deskripsi')->nullable();
             $table->string('gambar');
             $table->enum('status', ['draft', 'published'])->default('draft');
-            $table->foreignId('kategori_id')->constrained('kategori_galeri')->onDelete('cascade');
+            $table->foreignId('kategori_id')->constrained('kategori_galeris')->onDelete('cascade');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->default(1);
             $table->softDeletes();
             $table->timestamps();

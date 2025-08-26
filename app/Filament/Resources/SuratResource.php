@@ -25,6 +25,7 @@ class SuratResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-document-plus';
     protected static ?string $navigationGroup = 'Surat';
+    protected static ?int $navigationSort = 2;
     protected static ?string $navigationLabel = 'Buat Surat';
     protected static ?string $label = 'Buat Surat';
     protected static ?string $pluralLabel = 'Buat Surat';

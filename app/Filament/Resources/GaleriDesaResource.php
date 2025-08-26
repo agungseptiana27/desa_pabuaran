@@ -21,8 +21,7 @@ class GaleriDesaResource extends Resource
     protected static ?string $model = GaleriModel::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-photo';
-    protected static ?string $navigationGroup = 'Informasi Desa';
-    protected static ?string $navigationGroupLabel = 'Informasi Desa';
+    protected static ?string $navigationGroup = 'Informasi Galeri Desa';
     protected static ?string $navigationLabel = 'Galeri Desa';
     protected static ?string $label = 'Galeri Desa';
     protected static ?string $navigationSortLabel = 'Galeri Desa';
