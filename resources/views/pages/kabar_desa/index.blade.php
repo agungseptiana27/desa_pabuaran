@@ -17,20 +17,14 @@
     <div class="min-h-screen flex flex-col">
         <div class="relative">
             <!-- Bagian background warna -->
-            <div class="w-full h-50 md:h-55 bg-linear-to-br from-sky-500 to-sky-800 overflow-hidden">
-            </div>
+            <img src="{{ asset('images/banner.png') }}" 
+         class="w-full h-full object-fill" alt="Banner">
 
             <!-- Bagian teks judul -->
             <div class="absolute top-20 left-0 right-0 flex flex-col px-4 items-center justify-center pt-4">
                 <h1 class="text-center text-3xl md:text-4xl text-white font-medium mb-4">
                     Ayo Cari Tahu Kabar Desa Terbaru!
                 </h1>
-
-                <!-- Garis horizontal -->
-                <div class="flex justify-center w-full max-w-md px-8">
-                    <div class="h-1 md:h-1.5 w-1/2 bg-white rounded"></div>
-                    <div class="h-1 md:h-1.5 w-1/6 bg-white rounded mx-4"></div>
-                </div>
             </div>
         </div>
         <div class="container mx-auto py-10 px-4">
@@ -81,7 +75,7 @@
                                 <div class="flex justify-between items-center">
                                     <span class="text-sm text-gray-500">{{ $artikel->tanggal->format('d M Y') }}</span>
                                     <a href="{{ route('detail', $artikel->id) }}"
-                                        class="text-blue-600 hover:text-blue-800 font-semibold">
+                                        class="text-[#0D6630] hover:text-[#0D6630] font-semibold">
                                         Baca Selengkapnya
                                     </a>
                                 </div>
@@ -94,10 +88,12 @@
                     @endforelse
                 </div>
 
-                {{-- Pagination --}}
-                <div class="mt-8">
-                    {{ $berita->appends(request()->query())->links('pagination::tailwind') }}
+                <!-- Pagination -->
+                <div class="mt-10">
+                    {{ $berita->links() }}
                 </div>
+
+                
             </div>
         </div>
     </div>

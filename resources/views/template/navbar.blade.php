@@ -287,11 +287,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Mengubah warna teks logo
-            const logoText = navbar.querySelector('h6');
+            const logoText = navbar.querySelector('h1');
             if (logoText) {
                 logoText.classList.remove('text-white');
                 logoText.classList.add('text-gray-800');
             }
+            const logoText2 = navbar.querySelector('h3');
+            if (logoText) {
+                logoText.classList.remove('text-white');
+                logoText.classList.add('text-gray-800');
+            }
+
 
             isNavbarHidden = true;
         }
@@ -330,7 +336,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Mengubah warna teks logo kembali
-            const logoText = navbar.querySelector('h6');
+            const logoText = navbar.querySelector('h1');
+            if (logoText) {
+                logoText.classList.add('text-white');
+                logoText.classList.remove('text-gray-800');
+            }
+            const logoText2 = navbar.querySelector('h3');
             if (logoText) {
                 logoText.classList.add('text-white');
                 logoText.classList.remove('text-gray-800');
@@ -360,11 +371,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Mengubah warna teks logo
-            const logoText = navbar.querySelector('h6');
+            const logoText = navbar.querySelector('h1');
             if (logoText) {
                 logoText.classList.remove('text-white');
                 logoText.classList.add('text-gray-800');
             }
+            const logoText2 = navbar.querySelector('h3');
+            if (logoText) {
+                logoText.classList.remove('text-white');
+                logoText.classList.add('text-gray-800');
+            }
+
         }
 
         // Simpan posisi scroll untuk perbandingan berikutnya

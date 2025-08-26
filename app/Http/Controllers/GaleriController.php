@@ -19,7 +19,7 @@ class GaleriController extends Controller
             $galeri = GaleriModel::where('status', 'published')
                 ->with('kategori') // Load relasi kategori
                 ->latest('created_at')
-                ->get();
+                ->paginate(9);
 
             // Tampilkan halaman galeri dengan data
             return view('pages.galeri_desa.index', [

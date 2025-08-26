@@ -7,7 +7,7 @@
         <div class="relative">
             <!-- Bagian gambar -->
             <div class="h-150 md:h-auto overflow-hidden">
-                <img src="{{ asset('images/bg-kop-pengaduan-01.png') }}" alt="Background" class="w-full h-full object-cover">
+                <img src="{{ asset('images/banner.png') }}" alt="Background" class="w-full h-full object-cover">
             </div>
 
             <!-- Bagian teks judul -->

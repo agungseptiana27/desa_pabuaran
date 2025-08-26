@@ -42,7 +42,7 @@
 <section id="home">
     <div class="relative">
         <div class="h-[70vh] sm:h-[50vh] md:h-[70vh] lg:h-[100vh] overflow-hidden">
-            <img class="w-full h-full object-cover" src="{{ asset('images/background_home.jpg') }}"
+            <img class="w-full h-full object-cover" src="{{ asset('images/background_profile_desa.png') }}"
                 alt="Background Hero">
         </div>
         <div class="absolute inset-0 bg-black opacity-60"></div>
@@ -53,10 +53,10 @@
                 <div class="text-center lg:text-left order-2 lg:order-1">
                     <h4
                         class="text-2xl sm:text-3xl md:text-5xl lg:text-7xl text-white font-caveat font-bold mb-4 md:mb-6 leading-tight">
-                        Maha Loka Dharma
+                        Desa Pabuaran
                     </h4>
-                    <p class="text-white/90 text-base sm:text-lg md:text-xl max-w-md mx-auto lg:mx-0 leading-relaxed">
-                        Membangun desa yang maju, sejahtera, dan berkarakter bersama masyarakat yang gotong royong.
+                    <p class="text-white/90 text-base sm:text-lg md:text-xl  mx-auto lg:mx-0 leading-relaxed">
+                        Mewujudkan Desa Pabuaran yang Transparan, Informatif, dan Bersahabat.
                     </p>
                 </div>
                 <!-- Right: Kepala Desa Circle Photo -->
@@ -107,27 +107,33 @@
         <!-- Statistik Utama -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                <div class="text-3xl font-bold text-[#40916C] mb-2">5,102</div>
-                <div class="text-gray-600 text-sm">Total Penduduk</div>
+                <img src="{{ asset('images/jumlah_penduduk.png') }}" alt="Icon Penduduk" class="w-16 h-16 mx-auto mb-4">
+                <div class="font-bold text-black text-xl">Total Penduduk</div>
+                <div class="text-xl font-normal text-[#40916C] mb-2">5,102<span class="text-black"> jiwa</span></div>
             </div>
 
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                <div class="text-3xl font-bold text-[#40916C] mb-2">2,590 </div>
-                <div class="text-gray-600 text-sm">Laki-laki</div>
+                <img src="{{ asset('images/jumlah_laki.png') }}" alt="Icon Penduduk" class="w-16 h-16 mx-auto mb-4">
+                <div class="font-bold text-black text-xl">Laki-laki</div>
+                <div class="text-xl font-normal text-[#40916C] mb-2">2,590<span class="text-black"> jiwa</span></div>
             </div>
 
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                <div class="text-3xl font-bold text-[#40916C] mb-2">2,512 </div>
-                <div class="text-gray-600 text-sm">Perempuan</div>
+                <img src="{{ asset('images/jumlah_perempuan.png') }}" alt="Icon Penduduk"
+                    class="w-16 h-16 mx-auto mb-4">
+                <div class="font-bold text-black text-xl">Perempuan</div>
+                <div class="text-xl font-normal text-[#40916C] mb-2">2,512<span class="text-black"> jiwa</span></div>
             </div>
 
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                <div class="text-3xl font-bold text-[#40916C] mb-2">468</div>
-                <div class="text-gray-600 text-sm">Kepala Keluarga</div>
+                <img src="{{ asset('images/kepala_keluarga.png') }}" alt="Icon Penduduk" class="w-16 h-16 mx-auto mb-4">
+                <div class="font-bold text-black text-xl">Kepala Keluarga</div>
+                <div class="text-xl font-normal text-[#40916C] mb-2">468<span class="text-black"> jiwa</span></div>
             </div>
         </div>
     </div>
 </section>
+
 
 {{-- sejarah section --}}
 <section id="sejarah">
@@ -150,16 +156,11 @@
             semua arah dengan mengerahkan pasukan dari darat dan udara. Sejarah mencatat, masyarakat Pabuaran bersama
             Tentara berjuang bahu membahu mempertahankan kemedekaan NKRI.
         </p>
-        {{-- <p class="text-lg text-justify mb-5">
-                Dalam perkembangannya, Desa Pabuaran juga mengalami berbagai perubahan sosial dan budaya.
-                Masyarakatnya terus beradaptasi dengan perkembangan zaman, sambil tetap menjaga tradisi dan nilai-nilai
-                luhur yang diwariskan oleh nenek moyang. --}}
-        {{-- </p> --}}
     </div>
 </section>
 
 {{-- visi misi section --}}
-<section id="visi-misi" class="bg-[#40916C] py-20 px-20">
+<section id="visi-misi" class="bg-[#0A5126] py-20 px-20">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-white">
             <div>
@@ -185,11 +186,11 @@
 </section>
 
 {{-- demografi section --}}
-<section id="demografi" class="bg-gray-100 py-20 px-20">
+<section id="demografi" class="py-20 px-20">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center">
             <div>
-                <img class="w-80 md:order-last mx-auto" src="{{ asset('images/demografi_pabuaran.jpg') }}"
+                <img class="w-85 md:order-last mx-auto" src="{{ asset('images/demografi_pabuaran.jpg') }}"
                     alt="Demografi Desa">
             </div>
             <div>
@@ -220,36 +221,37 @@
 
 {{-- potensi section --}}
 <section id="potensi" class="py-20">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 max-w-6xl">
         <h2 class="text-4xl font-bold text-[#2D6A4F] text-center mb-10">Potensi Desa</h2>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div class="bg-white p-5 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-semibold mb-5">Pertanian</h3>
-                <p class="text-lg">
+            <!-- Pertanian -->
+            <div class="bg-white p-5 rounded-lg shadow-lg text-center">
+                <img src="{{ asset('images/pertanian.png') }}" alt="Potensi Pertanian"
+                    class="w-full h-64 object-cover rounded-md mb-5">
+                <h3 class="text-2xl font-semibold mb-3 text-[#0D6630]">Pertanian</h3>
+                <p class="text-base text-gray-700 leading-relaxed">
                     Desa Pabuaran memiliki lahan pertanian yang subur, dengan berbagai komoditas unggulan
-                    seperti
-                    padi, sayuran, dan buah-buahan.
+                    seperti padi, sayuran, dan buah-buahan.
                 </p>
             </div>
-            <div class="bg-white p-5 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-semibold mb-5">Perikanan</h3>
-                <p class="text-lg">
-                    Potensi perikanan di desa ini sangat menjanjikan, dengan banyaknya kolam ikan dan sungai
-                    yang
-                    melintasi wilayah desa.
+
+            <!-- Perikanan -->
+            <div class="bg-white p-5 rounded-lg shadow-lg text-center">
+                <img src="{{ asset('images/perikanan.png') }}" alt="Potensi Perikanan"
+                    class="w-full h-64 object-cover rounded-md mb-5">
+                <h3 class="text-2xl font-semibold mb-3 text-[#0D6630]">Perikanan</h3>
+                <p class="text-base text-gray-700 leading-relaxed">
+                    Potensi perikanan di desa ini sangat menjanjikan, dengan banyaknya kolam ikan
+                    dan sungai yang melintasi wilayah desa.
                 </p>
             </div>
-            <!-- <div class="bg-white p-5 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-semibold mb-5">Pariwisata</h3>
-                <p class="text-lg">
-                    Desa Pabuaran memiliki keindahan alam yang menakjubkan, dengan berbagai tempat wisata
-                    alam yang
-                    menarik untuk dikunjungi.
-                </p>
-            </div> -->
         </div>
     </div>
 </section>
+
+
+
 
 {{-- logo section  --}}
 <!-- <section id="logo" class="py-20 px-20">
