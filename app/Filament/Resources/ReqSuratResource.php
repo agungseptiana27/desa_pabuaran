@@ -319,6 +319,17 @@ class ReqSuratResource extends Resource
                                             1 => 'filament.resources.req_surat.templates.sk_domisili_masyarakat',
                                             2 => 'filament.resources.req_surat.templates.sk_wali_murid',
                                             3 => 'filament.resources.req_surat.templates.sk_penghasilan_ortu',
+                                            4 => 'filament.resources.req_surat.templates.sk_beda_nama',
+                                            5 => 'filament.resources.req_surat.templates.sk_domisili_lembaga',
+                                            6 => 'filament.resources.req_surat.templates.sk_tidak_dalam_sengketa',
+                                            7 => 'filament.resources.req_surat.templates.sk_taksir_tanah',
+                                            8 => 'filament.resources.req_surat.templates.sk_kks_perbaikan',
+                                            9 => 'filament.resources.req_surat.templates.sk_tidak_mampu',
+                                            10 => 'filament.resources.req_surat.templates.sk_tidak_mampu_sekolah',
+                                            11 => 'filament.resources.req_surat.templates.sk_tidak_mampu_bpjs',
+                                            12 => 'filament.resources.req_surat.templates.sp_rt_rw',
+                                            13 => 'filament.resources.req_surat.templates.sp_ktp',
+                                            14 => 'filament.resources.req_surat.templates.si_usaha',
                                             // Add more mappings as needed
                                         ];
 

@@ -100,13 +100,13 @@ class SuratTypeSeeder extends Seeder
             ],
             [
                 'surat_type_id' => 2,
-                'nama_sub_surat' => 'Surat Keterangan Tidak Mampu BPJS/PBI',
+                'nama_sub_surat' => 'Surat Keterangan Tidak Mampu BPJS PBI',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'surat_type_id' => 3,
-                'nama_sub_surat' => 'Surat Pengantar RT/RW',
+                'nama_sub_surat' => 'Surat Pengantar RT RW',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

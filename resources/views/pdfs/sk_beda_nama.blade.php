@@ -204,12 +204,44 @@
             </div>
         </div>
 
-        <p>Sebagai wali murid, saya bertanggung jawab penuh terhadap anak tersebut baik dalam hal pendidikan, biaya sekolah, serta pembinaan perilaku anak selama berada di lingkungan sekolah maupun di luar sekolah. Surat keterangan ini dibuat untuk keperluan administrasi sekolah dan untuk dipergunakan sebagaimana mestinya. Segala konsekuensi yang timbul akibat dari pernyataan ini akan menjadi tanggung jawab saya sebagai wali murid. Demikian surat ini saya buat dengan sebenar-benarnya tanpa ada paksaan dari pihak manapun. Apabila di kemudian hari terdapat kekeliruan dalam keterangan ini, saya bersedia untuk memberikan klarifikasi lebih lanjut.</p>
+        <p class="mb-2 text-xs">Menerangkan bahwa terdapat kesalahan nama pada {{ $surat->data_surat['keperluan'] }} dengan NIK {{ $surat->data_surat['nik'] }}. Berikut ini identitas diri sesuai dengan {{ $surat->data_surat['keperluan'] }} yang sebenarnya: </p>
+
+        <table class="identity my-4 text-xs" style="width: 100%; border-collapse: collapse;">
+    <tr>
+        <td style="width: 150px;">Nama</td>
+        <td style="width: 20px;">:</td>
+        <td>{{ $surat->data_surat['nama_seharusnya'] ?? '-' }}</td>
+    </tr>
+    <tr>
+        <td>NIK</td>
+        <td>:</td>
+        <td>{{ $surat->data_surat['nik'] }}</td>
+    </tr>
+    <tr>
+        <td>Tempat, tanggal lahir</td>
+        <td>:</td>
+        <td>
+            @if (isset($surat->data_surat['tempat_lahir']) && isset($surat->data_surat['tanggal_lahir']))
+                {{ ucfirst($surat->data_surat['tempat_lahir']) . ', ' . $surat->data_surat['tanggal_lahir'] }}
+            @else
+                -
+            @endif
+        </td>
+    </tr>
+    <tr>
+        <td>Alamat</td>
+        <td>:</td>
+        <td>{{ $surat->data_surat['alamat'] ?? '-' }}</td>
+    </tr>
+    <tr>
+        <td>Ibu Kandung</td>
+        <td>:</td>
+        <td>{{ $surat->data_surat['ibu_kandung'] ?? '-' }}</td>
+    </tr>
+</table>
     </div>
 
-    <p class="closing">Demikian surat keterangan ini dibuat dengan sebenarnya, untuk dapat digunakan sebagaimana
-        mestinya oleh
-        yang bersangkutan.</p>
+    <p class="pl-8 mb-4 text-xs">Perbedaan nama tersebut terjadi akibat adanya kesalahan penulisan/administrasi, dan dengan surat ini kami menegaskan bahwa nama tersebut adalah satu orang yang sama. Surat keterangan ini dibuat untuk keperluan administrasi, seperti pengurusan dokumen kependudukan, pendidikan, kesehatan, maupun urusan resmi lainnya. Demikian surat ini dibuat dengan sebenarnya agar dapat dipergunakan sebagaimana mestinya. Apabila di kemudian hari terdapat kekeliruan, akan dilakukan perbaikan sebagaimana mestinya.</p>
 
     <div class="signature">
         <p>Pabuaran, {{ \Carbon\Carbon::parse($surat->tgl_surat)->locale('id')->isoFormat('D MMMM YYYY') }}
@@ -223,4 +255,3 @@
 </body>
 
 </html>
-<

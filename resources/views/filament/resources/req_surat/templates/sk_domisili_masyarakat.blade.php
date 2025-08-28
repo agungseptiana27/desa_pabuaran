@@ -27,7 +27,7 @@
 
     <div class="header text-center mb-4">
         <div class="title text-xs font-bold underline mt-4 mb-1" style="text-transform: uppercase">
-            {{ $record->subSuratType->suratType->nama_surat ?? 'SURAT KETERANGAN' }}
+            {{ $record->subSuratType->suratType->nama_surat ?? 'SURAT KETERANGAN DOMISILI MASYARAKAT' }}
         </div>
         <div class="nomor text-xs">{{ $record->nomor_surat ?? 'Nomor: -' }}</div>
     </div>
@@ -63,12 +63,12 @@
                 <div>{{ $record->data_pemohon['nik_pemohon'] ?? '-' }}</div>
             </div>
             <div class="flex mb-1">
-                <div class="w-32">Tempat/ tanggal lahir</div>
+                <div class="w-32">Tempat, tanggal lahir</div>
                 <div class="w-4">:</div>
                 <div>
                     @if (isset($record->data_pemohon['tempat_lahir_pemohon']) &&
                     isset($record->data_pemohon['tgl_lahir_pemohon']))
-                    {{ ucfirst($record->data_pemohon['tempat_lahir_pemohon']) . '/' . $record->data_pemohon['tgl_lahir_pemohon'] }}
+                    {{ ucfirst($record->data_pemohon['tempat_lahir_pemohon']) . ',' . $record->data_pemohon['tgl_lahir_pemohon'] }}
                     @else
                     -
                     @endif
@@ -101,13 +101,16 @@
                 <div class="w-4">:</div>
                 <div>{{ $record->data_pemohon['alamat_pemohon'] ?? '-' }}</div>
             </div>
+            <div class="flex mb-1">
+                <div class="w-32">Keperluan</div>
+                <div class="w-4">:</div>
+                <div>{{ $record->data_pemohon['keperluan_pemohon'] ?? '-' }}</div>
+            </div>
         </div>
 
-        <p class="mb-2 text-xs">Bahwa benar nama tersebut diatas merupakan warga Desa Pabuaran Kecamatan Pabuaran
-            Kabupaten
+        <p class="mb-2 text-xs">Bahwa benar nama tersebut diatas merupakan warga Desa Pabuaran Kecamatan Pabuaran Kabupaten
             Subang yang sekarang bertempat tinggal dan atau berdomisili di :</p>
-
-        <div class="identity my-4 text-xs">
+        <div class="identity my-4">
             <div class="flex mb-1">
                 <div class="w-32">Blok</div>
                 <div class="w-4">:</div>
@@ -155,7 +158,7 @@
             {{ \Carbon\Carbon::now()->locale('id')->isoFormat('D MMMM YYYY') }}
             @endif
             <br>
-            abuaran,
+            Kepala Desa Pabuaran,
         </p>
         <div class="font-bold underline" style="margin-top: 3.5rem">Ristoyo</div>
     </div>

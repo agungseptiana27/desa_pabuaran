@@ -6,7 +6,7 @@
             @if (isset($record->desa) && $record->desa->logo)
             <img src="{{ Storage::url($record->desa->logo) }}" alt="Logo Desa" class="w-24 h-24">
             @else
-            <img src="{{ asset('images/logo/logo_desa_pabuaran-logo.png') }}" alt="Logo Desa" class="w-24 h-24"
+            <img src="{{ asset('images/logo/logo_desa_pabuaran.png') }}" alt="Logo Desa" class="w-24 h-24"
                 style="width: 60px; ">
             @endif
         </div>
@@ -27,7 +27,7 @@
 
     <div class="header text-center mb-4">
         <div class="title text-xs font-bold underline mt-4 mb-1" style="text-transform: uppercase">
-            {{ $record->subSuratType->suratType->nama_surat ?? 'SURAT KETERANGAN WALI MURID' }}
+            {{ $record->subSuratType->suratType->nama_surat ?? 'SURAT KETERANGAN KKS PERBAIKAN' }}
         </div>
         <div class="nomor text-xs">{{ $record->nomor_surat ?? 'Nomor: -' }}</div>
     </div>
@@ -107,13 +107,9 @@
                 <div>{{ $record->data_pemohon['keperluan_pemohon'] ?? '-' }}</div>
             </div>
         </div>
-
-        <p class="mb-2 text-xs">Sebagai wali murid, saya bertanggung jawab penuh terhadap anak tersebut baik dalam hal pendidikan, biaya sekolah, serta pembinaan perilaku anak selama berada di lingkungan sekolah maupun di luar sekolah. Surat keterangan ini dibuat untuk keperluan administrasi sekolah dan untuk dipergunakan sebagaimana mestinya. Segala konsekuensi yang timbul akibat dari pernyataan ini akan menjadi tanggung jawab saya sebagai wali murid. Demikian surat ini saya buat dengan sebenar-benarnya tanpa ada paksaan dari pihak manapun. Apabila di kemudian hari terdapat kekeliruan dalam keterangan ini, saya bersedia untuk memberikan klarifikasi lebih lanjut.</p>
     </div>
 
-    <p class="pl-8 mb-4 text-xs">Demikian surat keterangan ini dibuat dengan sebenarnya, untuk dapat digunakan
-        sebagaimana
-        mestinya oleh yang bersangkutan.</p>
+    <p class="pl-8 mb-4 text-xs"> Bahwa benar yang bersangkutan adalah warga Desa Pabuaran yang terdaftar sebagai penerima Kartu Keluarga Sejahtera (KKS), namun terdapat ketidaksesuaian data dan yang bersangkutan sedang mengajukan perbaikan/pembaruan data KKS. Surat ini dibuat sebagai pengantar perbaikan data pada instansi terkait agar dapat diproses sesuai ketentuan yang berlaku. Demikian surat keterangan ini dibuat dengan sebenarnya, untuk dapat digunakan sebagaimana mestinya oleh yang bersangkutan.</p>
 
     <div class="float-left w-2/5 text-right text-xs">
         <p class="mb-6">

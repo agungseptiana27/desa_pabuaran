@@ -5,7 +5,7 @@
         <div class="relative">
             <!-- Bagian gambar -->
             <div class="h-150 md:h-1auto overflow-hidden">
-                <img src="{{ asset('images/bg-kop-pengajuan-surat-01.png') }}" alt=""
+                <img src="{{ asset('images/banner.png') }}" alt=""
                     class="w-full h-full object-cover">
             </div>
 

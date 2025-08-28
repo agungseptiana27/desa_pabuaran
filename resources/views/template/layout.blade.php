@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', config('app.name'))</title>
 
-    <link rel="shortcut icon" href="{{ asset('images/favicon/logo_desa') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('images/logo/logo_desa_pabuaran.png') }}" type="image/png">
+
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
 

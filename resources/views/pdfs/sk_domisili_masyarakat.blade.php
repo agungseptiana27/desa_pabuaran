@@ -151,7 +151,7 @@
             <div class="identity-row">
                 <div class="identity-label">Nama</div>
                 <div class="identity-colon">:</div>
-                <div class="identity-value"><strong>Ristooy</strong></div>
+                <div class="identity-value"><strong>Ristoyo</strong></div>
             </div>
             <div class="identity-row">
                 <div class="identity-label">Jabatan</div>
@@ -197,39 +197,51 @@
                 <div class="identity-colon">:</div>
                 <div class="identity-value">{{ $surat->data_pemohon['alamat_pemohon'] }}</div>
             </div>
-        </div>
-
-        <p>Bahwa benar nama tersebut diatas merupakan warga Desa Pabuaran Kecamatan Pabuaran Kabupaten Subang
-            yang sekarang bertempat tinggal dan atau berdomisili di :</p>
-
-        <div class="identity">
             <div class="identity-row">
-                <div class="identity-label">Blok</div>
+                <div class="identity-label">Keperluan</div>
                 <div class="identity-colon">:</div>
-                <div class="identity-value">{{ $surat->data_surat['blok'] }}</div>
-            </div>
-            <div class="identity-row">
-                <div class="identity-label">RT/RW</div>
-                <div class="identity-colon">:</div>
-                <div class="identity-value">{{ $surat->data_surat['rt'] . '/' . $surat->data_surat['rw'] }}
-                </div>
-            </div>
-            <div class="identity-row">
-                <div class="identity-label">Desa</div>
-                <div class="identity-colon">:</div>
-                <div class="identity-value">{{ $surat->data_surat['desa'] }}</div>
-            </div>
-            <div class="identity-row">
-                <div class="identity-label">Kecamatan</div>
-                <div class="identity-colon">:</div>
-                <div class="identity-value">{{ $surat->data_surat['kecamatan'] }}</div>
-            </div>
-            <div class="identity-row">
-                <div class="identity-label">Kabupaten</div>
-                <div class="identity-colon">:</div>
-                <div class="identity-value">{{ $surat->data_surat['kabupaten'] }}</div>
+                <div class="identity-value">{{ $surat->data_pemohon['keperluan_pemohon'] }}</div>
             </div>
         </div>
+
+        <p>Bahwa benar nama tersebut diatas merupakan warga Desa Pabuaran Kecamatan Pabuaran Kabupaten Subang yang
+            sekarang bertempat tinggal dan atau berdomisili di :</p>
+        <table class="table-auto border-collapse w-full text-sm my-4">
+    <tbody>
+        <tr>
+            <td class="w-32 align-top">Blok</td>
+            <td class="w-4 align-top">:</td>
+            <td>{{ $surat->data_surat['blok'] ?? '-' }}</td>
+        </tr>
+        <tr>
+            <td class="w-32 align-top">RT/RW</td>
+            <td class="w-4 align-top">:</td>
+            <td>
+                @if (isset($surat->data_surat['rt']) && isset($surat->data_surat['rw']))
+                    {{ $surat->data_surat['rt'] . '/' . $surat->data_surat['rw'] }}
+                @else
+                    -
+                @endif
+            </td>
+        </tr>
+        <tr>
+            <td class="w-32 align-top">Desa</td>
+            <td class="w-4 align-top">:</td>
+            <td>{{ $surat->data_surat['desa'] ?? '-' }}</td>
+        </tr>
+        <tr>
+            <td class="w-32 align-top">Kecamatan</td>
+            <td class="w-4 align-top">:</td>
+            <td>{{ $surat->data_surat['kecamatan'] ?? '-' }}</td>
+        </tr>
+        <tr>
+            <td class="w-32 align-top">Kabupaten</td>
+            <td class="w-4 align-top">:</td>
+            <td>{{ $surat->data_surat['kabupaten'] ?? '-' }}</td>
+        </tr>
+    </tbody>
+</table>
+
     </div>
 
     <p class="closing">Demikian surat keterangan ini dibuat dengan sebenarnya, untuk dapat digunakan sebagaimana
@@ -239,9 +251,9 @@
     <div class="signature">
         <p>Pabuaran, {{ \Carbon\Carbon::parse($surat->tgl_surat)->locale('id')->isoFormat('D MMMM YYYY') }}
             <br>
-            Kepala Pabuaran,
+            Kepala Desa Pabuaran,
         </p>
-        <div class="signature-name">Ristoy</div>
+        <div class="signature-name">Ristoyo</div>
     </div>
     <div class="clear"></div>
     </div>

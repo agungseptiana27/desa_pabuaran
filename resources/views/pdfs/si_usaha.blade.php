@@ -120,6 +120,7 @@
     .closing {
         margin: 5px 0;
         text-indent: 30px;
+        text-align: justify;
     }
     </style>
 </head>
@@ -151,7 +152,7 @@
             <div class="identity-row">
                 <div class="identity-label">Nama</div>
                 <div class="identity-colon">:</div>
-                <div class="identity-value"><strong>Ristoyo</strong></div>
+                <div class="identity-value"><strong>Ristooy</strong></div>
             </div>
             <div class="identity-row">
                 <div class="identity-label">Jabatan</div>
@@ -203,13 +204,9 @@
                 <div class="identity-value">{{ $surat->data_pemohon['keperluan_pemohon'] }}</div>
             </div>
         </div>
-
-        <p>Sebagai wali murid, saya bertanggung jawab penuh terhadap anak tersebut baik dalam hal pendidikan, biaya sekolah, serta pembinaan perilaku anak selama berada di lingkungan sekolah maupun di luar sekolah. Surat keterangan ini dibuat untuk keperluan administrasi sekolah dan untuk dipergunakan sebagaimana mestinya. Segala konsekuensi yang timbul akibat dari pernyataan ini akan menjadi tanggung jawab saya sebagai wali murid. Demikian surat ini saya buat dengan sebenar-benarnya tanpa ada paksaan dari pihak manapun. Apabila di kemudian hari terdapat kekeliruan dalam keterangan ini, saya bersedia untuk memberikan klarifikasi lebih lanjut.</p>
     </div>
 
-    <p class="closing">Demikian surat keterangan ini dibuat dengan sebenarnya, untuk dapat digunakan sebagaimana
-        mestinya oleh
-        yang bersangkutan.</p>
+    <p class="closing">Surat izin usaha ini berlaku sejak tanggal ditetapkan dan dapat digunakan untuk melengkapi keperluan administrasi perizinan, pengajuan kredit, maupun kebutuhan hukum lainnya. Demikian surat izin usaha ini diberikan agar dapat digunakan sebagaimana mestinya. Apabila di kemudian hari terdapat hal-hal yang tidak sesuai, surat ini dapat ditinjau kembali. Demikian surat keterangan ini dibuat dengan sebenarnya, untuk dapat digunakan sebagaimana mestinya oleh yang bersangkutan.</p>
 
     <div class="signature">
         <p>Pabuaran, {{ \Carbon\Carbon::parse($surat->tgl_surat)->locale('id')->isoFormat('D MMMM YYYY') }}
@@ -223,4 +220,3 @@
 </body>
 
 </html>
-<

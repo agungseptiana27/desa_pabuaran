@@ -229,7 +229,7 @@
 
         <div class="signature">
             <p>Pabuaran, 15 Januari 2025<br>
-                Kepala Pabuaran,</p>
+                Kepala Desa Pabuaran,</p>
             <br><br><br><br>
             <div class="signature-name">Ristoyo</div>
         </div>

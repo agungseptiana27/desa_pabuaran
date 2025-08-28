@@ -26,4 +26,9 @@ class SubSuratTypeModel extends Model
     {
         return $this->hasMany(SuratModel::class, 'sub_surat_type_id');
     }
+
+    public function formSurat()
+    {
+        return $this->hasMany(FormSuratModel::class, 'form_id');
+    }
 }

@@ -204,7 +204,7 @@
             </div>
         </div>
 
-        <p>Sebagai wali murid, saya bertanggung jawab penuh terhadap anak tersebut baik dalam hal pendidikan, biaya sekolah, serta pembinaan perilaku anak selama berada di lingkungan sekolah maupun di luar sekolah. Surat keterangan ini dibuat untuk keperluan administrasi sekolah dan untuk dipergunakan sebagaimana mestinya. Segala konsekuensi yang timbul akibat dari pernyataan ini akan menjadi tanggung jawab saya sebagai wali murid. Demikian surat ini saya buat dengan sebenar-benarnya tanpa ada paksaan dari pihak manapun. Apabila di kemudian hari terdapat kekeliruan dalam keterangan ini, saya bersedia untuk memberikan klarifikasi lebih lanjut.</p>
+        <p>Berdasarkan keterangan yang ada, penghasilan orang tua tersebut rata-rata sebesar Rp {{ $surat->data_surat['penghasilan_per_bulan'] }} per bulan yang berasal dari pekerjaan sebagai {{ $surat->data_surat['pekerjaan'] }} Dengan penghasilan tersebut, dapat dikategorikan bahwa keluarga ini termasuk keluarga dengan kemampuan ekonomi rendah/menengah (sesuai kondisi). Surat ini dibuat sebagai kelengkapan administrasi dalam pengajuan bantuan pendidikan/beasiswa/keperluan administrasi lainnya. Demikian surat keterangan ini dibuat dengan sebenarnya agar dapat dipergunakan sebagaimana mestinya. Jika di kemudian hari terdapat kekeliruan, maka akan dilakukan perbaikan sesuai ketentuan.</p>
     </div>
 
     <p class="closing">Demikian surat keterangan ini dibuat dengan sebenarnya, untuk dapat digunakan sebagaimana
@@ -223,4 +223,3 @@
 </body>
 
 </html>
-<

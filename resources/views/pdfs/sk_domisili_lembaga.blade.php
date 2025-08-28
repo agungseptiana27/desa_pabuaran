@@ -120,6 +120,7 @@
     .closing {
         margin: 5px 0;
         text-indent: 30px;
+        text-align: justify;
     }
     </style>
 </head>
@@ -204,12 +205,33 @@
             </div>
         </div>
 
-        <p>Sebagai wali murid, saya bertanggung jawab penuh terhadap anak tersebut baik dalam hal pendidikan, biaya sekolah, serta pembinaan perilaku anak selama berada di lingkungan sekolah maupun di luar sekolah. Surat keterangan ini dibuat untuk keperluan administrasi sekolah dan untuk dipergunakan sebagaimana mestinya. Segala konsekuensi yang timbul akibat dari pernyataan ini akan menjadi tanggung jawab saya sebagai wali murid. Demikian surat ini saya buat dengan sebenar-benarnya tanpa ada paksaan dari pihak manapun. Apabila di kemudian hari terdapat kekeliruan dalam keterangan ini, saya bersedia untuk memberikan klarifikasi lebih lanjut.</p>
+        <p>Bahwa benar yang bersangkutan telah meninggal dunia pada:</p>
+
+        <table class="identity my-4 text-xs" style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="width: 150px;">Nama</td>
+                <td style="width: 20px;">:</td>
+                <td>{{ $surat->data_surat['nama_alm'] ?? '-' }}</td>
+            </tr>
+            <tr>
+                <td style="width: 150px;">Hari / Tanggal</td>
+                <td style="width: 20px;">:</td>
+                <td>{{ $surat->data_surat['tanggal_meninggal'] ?? '-' }}</td>
+            </tr>
+            <tr>
+                <td>Tempat Meninggal </td>
+                <td>:</td>
+                <td>{{ $surat->data_surat['tempat_meninggal'] }}</td>
+            </tr>
+            <tr>
+                <td>Sebab Meninggal</td>
+                <td>:</td>
+                <td>{{ $surat->data_surat['sebab_meninggal'] }}</td>
+            </tr>
+        </table>
     </div>
 
-    <p class="closing">Demikian surat keterangan ini dibuat dengan sebenarnya, untuk dapat digunakan sebagaimana
-        mestinya oleh
-        yang bersangkutan.</p>
+    <p class="closing">Almarhum/Almarhumah tersebut adalah benar warga Desa Pabuaran dan semasa hidupnya berdomisili di alamat sebagaimana tercantum di atas. Adapun hubungan pelapor dengan Almarhum/Almarhumah adalah {{ $surat->data_surat['hubungan_pelapor'] }}. Surat keterangan ini dibuat untuk dipergunakan sebagai kelengkapan administrasi kependudukan maupun keperluan lain yang sah, serta agar dapat digunakan sebagaimana mestinya. Demikian surat keterangan ini dibuat dengan sebenar-benarnya. Apabila di kemudian hari terdapat kekeliruan, maka akan dilakukan perbaikan sebagaimana mestinya.</p>
 
     <div class="signature">
         <p>Pabuaran, {{ \Carbon\Carbon::parse($surat->tgl_surat)->locale('id')->isoFormat('D MMMM YYYY') }}
@@ -223,4 +245,3 @@
 </body>
 
 </html>
-<

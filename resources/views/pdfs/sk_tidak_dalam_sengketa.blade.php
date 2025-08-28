@@ -151,7 +151,7 @@
             <div class="identity-row">
                 <div class="identity-label">Nama</div>
                 <div class="identity-colon">:</div>
-                <div class="identity-value"><strong>Ristoyo</strong></div>
+                <div class="identity-value"><strong>Ristooy</strong></div>
             </div>
             <div class="identity-row">
                 <div class="identity-label">Jabatan</div>
@@ -204,7 +204,7 @@
             </div>
         </div>
 
-        <p>Sebagai wali murid, saya bertanggung jawab penuh terhadap anak tersebut baik dalam hal pendidikan, biaya sekolah, serta pembinaan perilaku anak selama berada di lingkungan sekolah maupun di luar sekolah. Surat keterangan ini dibuat untuk keperluan administrasi sekolah dan untuk dipergunakan sebagaimana mestinya. Segala konsekuensi yang timbul akibat dari pernyataan ini akan menjadi tanggung jawab saya sebagai wali murid. Demikian surat ini saya buat dengan sebenar-benarnya tanpa ada paksaan dari pihak manapun. Apabila di kemudian hari terdapat kekeliruan dalam keterangan ini, saya bersedia untuk memberikan klarifikasi lebih lanjut.</p>
+        <p>Bahwa benar tanah tersebut adalah milik yang bersangkutan dan sampai dengan saat diterbitkannya surat keterangan ini, tanah tersebut tidak dalam sengketa dengan pihak manapun, baik secara perdata maupun pidana. Surat keterangan ini dibuat untuk memenuhi kebutuhan administrasi dalam hal jual beli, pengurusan sertifikat, pinjaman bank, maupun keperluan lainnya yang sah menurut hukum.</p>
     </div>
 
     <p class="closing">Demikian surat keterangan ini dibuat dengan sebenarnya, untuk dapat digunakan sebagaimana
@@ -223,4 +223,3 @@
 </body>
 
 </html>
-<

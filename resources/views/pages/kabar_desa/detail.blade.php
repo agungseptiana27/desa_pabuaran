@@ -6,21 +6,15 @@
     <div class="min-h-screen flex flex-col">
         <div class="relative">
             <!-- Bagian background warna -->
-            <div class="w-full h-50 md:h-55 bg-linear-to-br from-sky-500 to-sky-800 overflow-hidden">
-            </div>
-
-            <!-- Bagian teks judul -->
-            <div class="absolute top-20 left-0 right-0 flex flex-col px-4 items-center justify-center pt-4">
-                <h1 class="text-center text-3xl md:text-4xl text-white font-medium mb-4">
-                    Jelajahi Kabar Tentang Desa Yuk!
-                </h1>
-
-                <!-- Garis horizontal -->
-                <div class="flex justify-center w-full max-w-md px-8">
-                    <div class="h-1 md:h-1.5 w-1/2 bg-white rounded"></div>
-                    <div class="h-1 md:h-1.5 w-1/6 bg-white rounded mx-4"></div>
-                </div>
-            </div>
+            <div class="relative w-full h-[250px] md:h-[300px] overflow-hidden">
+    <img src="{{ asset('images/banner.png') }}" 
+         class="w-full h-full object-fill" alt="Banner">
+    
+    <div class="absolute inset-0 flex flex-col items-center justify-center px-4">
+        <h1 class="text-center text-3xl md:text-4xl text-white font-medium mb-4">
+            Jelajahi Kabar Tentang Desa Yuk!
+        </h1>
+    </div>
         </div>
         <div class="container mx-auto py-10 px-4">
             <div class="max-w-4xl mx-auto">
@@ -103,7 +97,7 @@
                                             <span
                                                 class="text-sm text-gray-500">{{ \Carbon\Carbon::parse($terkait->tgl_publish)->format('d M Y') }}</span>
                                             <a href="{{ route('detail', $terkait->id) }}"
-                                                class="text-blue-600 hover:text-blue-800 font-semibold">
+                                                class="text-[#0D6630] hover:text-green-900 font-semibold">
                                                 Baca
                                             </a>
                                         </div>
@@ -117,7 +111,7 @@
                 {{-- Back Button --}}
                 <div class="text-center">
                     <a href="{{ route('kabar-desa.index') }}"
-                        class="inline-flex items-center px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                        class="inline-flex items-center px-5 py-2 bg-[#0D6630] text-white rounded-lg hover:bg-green-900 transition">
                         <i class="uil uil-arrow-left mr-2"></i> Kembali ke Daftar Berita
                     </a>
                 </div>

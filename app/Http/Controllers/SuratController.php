@@ -596,7 +596,19 @@ class SuratController extends Controller
         ]);
 
         // Generate nama file unik
-        $filename = $surat->tgl_surat->format('Y-m-d') . '_' . $surat->subSuratType->nama_sub_surat . '_' . $surat->data_pemohon['nama_lengkap_pemohon'] . '.pdf';
+        // Sanitasi string agar aman jadi nama file
+function sanitizeFileName($string) {
+    // Ganti / dan \ jadi -
+    $string = str_replace(['/', '\\'], '-', $string);
+    // Hapus karakter yang tidak valid (opsional, biar lebih aman)
+    return preg_replace('/[^A-Za-z0-9_\-\. ]/', '', $string);
+}
+
+$namaSurat = sanitizeFileName($surat->subSuratType->nama_sub_surat);
+$namaPemohon = sanitizeFileName($surat->data_pemohon['nama_lengkap_pemohon']);
+
+$filename = $surat->tgl_surat->format('Y-m-d') . '_' . $namaSurat . '_' . $namaPemohon . '.pdf';
+
 
         // Simpan di storage public
         $path = $storagePath . '/' . $filename;
