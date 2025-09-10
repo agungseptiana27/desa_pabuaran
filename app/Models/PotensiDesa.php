@@ -5,18 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Demografi extends Model
+class PotensiDesa extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'judul',
         'deskripsi',
-        'batas_wilayah',
-        'map_embed',
-    ];
-
-    protected $casts = [
-        'batas_wilayah' => 'array',
+        'gambar',
     ];
 }

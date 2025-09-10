@@ -42,7 +42,15 @@
 
 </head>
 
-<body class="bg-[#FFFDF7]">
+<body class="bg-[#FFFDF7] overflow-x-hidden" >
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+    </style>
+
     @if (!isset($noNavbar) || $noNavbar !== true)
     @include('template.navbar')
     @endif
@@ -125,6 +133,9 @@
     // });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
 
 </body>
 

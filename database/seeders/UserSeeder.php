@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
             'nik' => '3212170204030001',
             'password' => 'admin123',
             'role_id' => '1', // admin
+            'email_verified_at' => now(),
         ]);
     }
 }

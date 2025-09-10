@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('demografis', function (Blueprint $table) {
+        Schema::create('potensi_desas', function (Blueprint $table) {
             $table->id();
-            $table->string('judul')->default('Demografi Desa');
-            $table->longText('deskripsi')->nullable();
-            $table->json('batas_wilayah')->nullable();
-            $table->longText('map_embed')->nullable();
+            $table->string('judul');
+            $table->text('deskripsi')->nullable();
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('demografis');
+        Schema::dropIfExists('potensi_desas');
     }
 };

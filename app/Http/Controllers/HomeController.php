@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\GaleriModel;
 use App\Models\StrukturOrganisasi;
 use App\Models\Transaction;
@@ -75,11 +76,12 @@ class HomeController extends Controller
             ->orderByRaw("CASE WHEN position LIKE '%Kepala Desa Pabuaran%' THEN 0 ELSE 1 END")
             ->get();
 
+        $banners = Banner::where('status', true)->get();
+
 
 
         return view('home', compact('suratTypes', 'kabarDesa', 'galeri', 'pemasukan',
-        'pengeluaran',
-        'selisih', 'structures'));
+        'pengeluaran', 'selisih', 'structures', 'banners'));
 
     }
 

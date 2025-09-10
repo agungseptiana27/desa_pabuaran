@@ -104,7 +104,7 @@
 </section>
 
 {{-- Grafik Statistik desa --}}
-<section id="grafik-statistik" class="bg-white pt-10 px-20">
+<section id="grafik-statistik" class="pt-10 px-20">
     <div class="container mx-auto px-4">
         {{-- <h2 class="text-4xl font-bold text-center mb-10 text-white">Grafik Statistik Desa Pabuaran</h2> --}}
         <!-- Statistik Utama -->
@@ -195,38 +195,40 @@
 </section>
 
 {{-- demografi section --}}
-<section id="demografi" class="py-20 px-20">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center">
-            <div>
-                <img class="w-85 md:order-last mx-auto" src="{{ asset('images/demografi_pabuaran.jpg') }}"
-                    alt="Demografi Desa">
-            </div>
-            <div>
-                <h2 class="text-3xl font-bold text-left mb-10 text-[#2D6A4F]">Demografi Desa Pabuaran</h2>
-                <p class="text-lg text-justify mb-5">
-                    Secara goegrafis kecamatan Pabuaran
-                    terletak di bagian utara Kabupaten Subang.
-                    Dengan Luas wilayah kecamatan Pabuaran adalah 65,43km2 yang-batas batas wilayahnya sebagai berikut:
-                </p>
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>Selatan: berbatasan dengan
-                        Kec. Cipeundeuy.
-                    </li>
-                    <li>Utara: berbatasan dengan
-                        Kec. Patokbeusi.
-                    </li>
-                    <li>Timur: berbatasan dengan
-                        Kec. Purwadadi.
-                    </li>
-                    <li>Barat: berbatasan dengan
-                        Kab. Purwakarta</li>
-                </ul>
-            </div>
+<section id="demografi" class="py-12">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
+        <!-- Map -->
+        <div>
+            @if($demografi && $demografi->map_embed)
+                <iframe src="{{ $demografi->map_embed }}" 
+                        class="w-full h-80 rounded-lg shadow"
+                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            @else
+                <p class="text-[#2D6A4F]">Belum ada peta</p>
+            @endif
+        </div>
+
+        <!-- Content -->
+        <div>
+            <h2 class="text-2xl font-bold text-[#2D6A4F] mb-4">
+                {{ $demografi->judul ?? 'Demografi Desa' }}
+            </h2>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+                {{ $demografi->deskripsi ?? 'Belum ada deskripsi' }}
+            </p>
+
+            @if($demografi && is_array($demografi->batas_wilayah))
+                <ul class="list-disc pl-6 space-y-1">
+                    @foreach($demografi->batas_wilayah as $batas)
+                        <li>{{ $batas['arah'] }}: {{ $batas['batas'] }}</li>
+                    @endforeach
+                </ul>
+            @endif
         </div>
     </div>
 </section>
+
 
 {{-- potensi section --}}
 <section id="potensi" class="py-20">
@@ -234,27 +236,17 @@
         <h2 class="text-4xl font-bold text-[#2D6A4F] text-center mb-10">Potensi Desa</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <!-- Pertanian -->
+            @foreach ( $potensiDesa as $potensi )
             <div class="bg-white p-5 rounded-lg shadow-lg text-center">
-                <img src="{{ asset('images/pertanian.png') }}" alt="Potensi Pertanian"
+                <img src="{{ asset('storage/' . $potensi->gambar) }}" alt="{{ $potensi->judul }}"
                     class="w-full h-64 object-cover rounded-md mb-5">
-                <h3 class="text-2xl font-semibold mb-3 text-[#0D6630]">Pertanian</h3>
+                <h3 class="text-2xl font-semibold mb-3 text-[#0D6630]">{{ $potensi->judul }}</h3>
                 <p class="text-base text-gray-700 leading-relaxed">
-                    Desa Pabuaran memiliki lahan pertanian yang subur, dengan berbagai komoditas unggulan
-                    seperti padi, sayuran, dan buah-buahan.
+                    {{ $potensi->deskripsi }}
                 </p>
             </div>
-
-            <!-- Perikanan -->
-            <div class="bg-white p-5 rounded-lg shadow-lg text-center">
-                <img src="{{ asset('images/perikanan.png') }}" alt="Potensi Perikanan"
-                    class="w-full h-64 object-cover rounded-md mb-5">
-                <h3 class="text-2xl font-semibold mb-3 text-[#0D6630]">Perikanan</h3>
-                <p class="text-base text-gray-700 leading-relaxed">
-                    Potensi perikanan di desa ini sangat menjanjikan, dengan banyaknya kolam ikan
-                    dan sungai yang melintasi wilayah desa.
-                </p>
-            </div>
+            @endforeach
+            
         </div>
     </div>
 </section>

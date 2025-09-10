@@ -17,7 +17,13 @@ class StrukturOrganisasiResource extends Resource
 {
     protected static ?string $model = StrukturOrganisasi::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'Anggota Desa';
+
+    protected static ?string $navigationGroup = 'Anggota Desa';
+
+    protected static ?int $navigationSort = 5;
+
+    protected static ?string $navigationIcon = 'heroicon-s-user-group';
 
     public static function form(Form $form): Form
     {

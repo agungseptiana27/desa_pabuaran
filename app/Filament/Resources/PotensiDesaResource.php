@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\VisiMisiResource\Pages;
-use App\Filament\Resources\VisiMisiResource\RelationManagers;
-use App\Models\VisiMisi;
+use App\Filament\Resources\PotensiDesaResource\Pages;
+use App\Filament\Resources\PotensiDesaResource\RelationManagers;
+use App\Models\PotensiDesa;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,54 +13,55 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class VisiMisiResource extends Resource
+class PotensiDesaResource extends Resource
 {
-    protected static ?string $model = VisiMisi::class;
+    protected static ?string $model = PotensiDesa::class;
 
-    protected static ?string $navigationLabel = 'Visi Misi';
+    protected static ?string $navigationLabel = 'Potensi Desa';
 
     protected static ?string $navigationGroup = 'Profil Desa';
 
     protected static ?int $navigationSort = 6;
 
-    protected static ?string $navigationIcon = 'heroicon-s-star';
+    protected static ?string $navigationIcon = 'heroicon-c-document-currency-dollar';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\Textarea::make('visi')
-                    ->label('Visi')
+                Forms\Components\TextInput::make('judul')
+                    ->label('Judul')
                     ->required()
-                    ->helperText('Pisahkan setiap poin misi dengan tanda enter')
+                    ->maxLength(255),
+
+                Forms\Components\Textarea::make('deskripsi')
+                    ->label('Deskripsi')
                     ->rows(5),
-                Forms\Components\Repeater::make('misi')
-                ->label('Daftar Misi')
-                ->schema([
-                    Forms\Components\TextInput::make('poin')
-                        ->label('Poin Misi')
-                        ->required(),
-                ])
-                ->minItems(1)
-                ->createItemButtonLabel('Tambah Misi')
-                ->columns(1),
-            ]);
+
+                Forms\Components\FileUpload::make('gambar')
+                    ->label('Gambar')
+                    ->image()
+                    ->directory('potensi')
+                    ->required(),
+                ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('visi')
-                ->label('Visi')
-                ->limit(50) // biar tidak terlalu panjang
-                ->sortable()
-                ->searchable(),
+                Tables\Columns\ImageColumn::make('gambar')
+                    ->label('Gambar')
+                    ->circular(),
 
-            Tables\Columns\TextColumn::make('misi')
-                ->label('Misi')
-                ->formatStateUsing(fn ($state) => collect($state)->pluck('poin')->implode(', '))
-                ->limit(50), // tampil ringkas, misalnya dipisahkan koma
+                Tables\Columns\TextColumn::make('judul')
+                    ->label('Judul')
+                    ->searchable()
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('deskripsi')
+                    ->limit(50)
+                    ->label('Deskripsi'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -95,9 +96,9 @@ class VisiMisiResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListVisiMisis::route('/'),
-            'create' => Pages\CreateVisiMisi::route('/create'),
-            'edit' => Pages\EditVisiMisi::route('/{record}/edit'),
+            'index' => Pages\ListPotensiDesas::route('/'),
+            'create' => Pages\CreatePotensiDesa::route('/create'),
+            'edit' => Pages\EditPotensiDesa::route('/{record}/edit'),
         ];
     }
 }

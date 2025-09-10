@@ -17,7 +17,13 @@ class KependudukanResource extends Resource
 {
     protected static ?string $model = Kependudukan::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'Kependudukan';
+
+    protected static ?string $navigationGroup = 'Profil Desa';
+
+    protected static ?int $navigationSort = 6;
+
+    protected static ?string $navigationIcon = 'heroicon-o-globe-americas';
 
     public static function form(Form $form): Form
     {

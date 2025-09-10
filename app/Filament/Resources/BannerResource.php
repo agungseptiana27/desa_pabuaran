@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\FullStrukturOrganisasiResource\Pages;
-use App\Filament\Resources\FullStrukturOrganisasiResource\RelationManagers;
-use App\Models\FullStrukturOrganisasi;
+use App\Filament\Resources\BannerResource\Pages;
+use App\Filament\Resources\BannerResource\RelationManagers;
+use App\Models\Banner;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,28 +13,27 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class FullStrukturOrganisasiResource extends Resource
+class BannerResource extends Resource
 {
-    protected static ?string $model = FullStrukturOrganisasi::class;
+    protected static ?string $model = Banner::class;
 
-    protected static ?string $navigationLabel = 'Struktur Organisasi';
-
-    protected static ?string $navigationGroup = 'Profil Desa';
-
-    protected static ?int $navigationSort = 6;
-
-    protected static ?string $navigationIcon = 'heroicon-s-rectangle-group';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('nama')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\FileUpload::make('image')
+                Forms\Components\TextInput::make('judul')
+                    ->maxLength(255),
+
+                Forms\Components\FileUpload::make('gambar')
+                    ->directory('banners')
                     ->image()
                     ->required(),
+
+                Forms\Components\Toggle::make('status')
+                    ->label('Aktif')
+                    ->default(true),
             ]);
     }
 
@@ -42,9 +41,9 @@ class FullStrukturOrganisasiResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nama')
-                    ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('gambar')->square(),
+                Tables\Columns\TextColumn::make('judul'),
+                Tables\Columns\IconColumn::make('status')->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -59,6 +58,7 @@ class FullStrukturOrganisasiResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -77,9 +77,9 @@ class FullStrukturOrganisasiResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListFullStrukturOrganisasis::route('/'),
-            'create' => Pages\CreateFullStrukturOrganisasi::route('/create'),
-            'edit' => Pages\EditFullStrukturOrganisasi::route('/{record}/edit'),
+            'index' => Pages\ListBanners::route('/'),
+            'create' => Pages\CreateBanner::route('/create'),
+            'edit' => Pages\EditBanner::route('/{record}/edit'),
         ];
     }
 }
