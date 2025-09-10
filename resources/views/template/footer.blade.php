@@ -16,17 +16,21 @@
                     <p class="text-gray-300 mb-4">
                         Membangun masa depan desa dengan semangat gotong royong, inovasi, dan keberlanjutan.
                     </p>
-                    <div class="flex space-x-4">
+                    <div class="flex items-center space-x-4">
                         <a href="" class="text-white hover:text-sky-400 transition duration-300">
                             <i class="uil uil-facebook-f text-2xl"></i>
                         </a>
-                        <a href="" class="text-white hover:text-sky-400 transition duration-300">
+                        <a href="https://www.instagram.com/pemdes_pabuaran_maju_selalu" class="text-white hover:text-sky-400 transition duration-300">
                             <i class="uil uil-instagram text-2xl"></i>
                         </a>
-                        <a href="" class="text-white hover:text-sky-400 transition duration-300">
-                            <i class="uil uil-twitter-alt text-2xl"></i>
+                        <a href="https://www.tiktok.com/@pemdes.pabuaran.m" 
+                        class="text-white hover:text-sky-400 transition duration-300">
+                            <img src="{{ asset('images/icons/tiktok.svg') }}" 
+                                alt="TikTok" 
+                                class="w-6 h-6 invert brightness-0 inline-block align-middle">
                         </a>
                     </div>
+
                 </div>
             </div>
 

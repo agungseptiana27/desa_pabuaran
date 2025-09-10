@@ -33,6 +33,13 @@
     @endif
 
     @yield('style')
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+4fA9VfT1gqL6RlmJf0J7mF0z5M6pV7Y+Gk5qUj0Q1YfJv1a35rYPx4FZ9W+9C5YKg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body class="bg-[#FFFDF7]">
@@ -117,6 +124,8 @@
     //     });
     // });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 
 </html>

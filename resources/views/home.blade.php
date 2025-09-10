@@ -199,6 +199,35 @@
     </div>
 </section>
 
+<!-- Struktur Organisasi -->
+ <section>
+    <div class="text-center mb-8" data-aos="fade-up" data-aos-duration="1200">
+        <h2 class="text-4xl font-bold text-[#0D6630] mb-4">Struktur Organisasi</h2>
+        <p class="text-[#676767] max-w-2xl mx-auto">
+            Susunan dan pembagian kerja dalam sebuah organisas desa.
+        </p>
+    </div>
+    <div class="swiper mySwiper" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+        <div class="swiper-wrapper">
+            @foreach($structures as $struktur)
+                <div class="swiper-slide" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="{{ $index * 200 }}">
+                    <div class="bg-white rounded-xl shadow-md text-center p-4 max-w-xs mx-auto">
+                        <img src="{{ asset('storage/' . $struktur->photo) }}"
+                            alt="{{ $struktur->name }}"
+                            class="w-full h-80 object-cover">
+                        <h3 class="font-bold text-[#2D6A4F]">{{ $struktur->name }}</h3>
+                        <p class="text-gray-600">{{ $struktur->position }}</p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+
+
 <!-- anggaran keuangan -->
 <section id="anggaran-desa" class="py-12 bg-[#FFFDF7]">
     <div class="container mx-auto px-4">

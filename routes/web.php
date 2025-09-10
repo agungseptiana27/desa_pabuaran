@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\FullStrukturOrganisasiController;
+use App\Http\Controllers\ProfileDesaController;
+use App\Models\FullStrukturOrganisasi;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SuratController;
@@ -39,9 +42,10 @@ Route::prefix('pengaduan')->group(function () {
 })->middleware(['auth', 'verified']);
 
 // pages profile desa
-Route::get('profile-desa', function () {
-    return view('pages.profile_desa.index');
-})->name('profile-desa');
+// Route::get('profile-desa', function () {
+//     return view('pages.profile_desa.index');
+// })->name('profile-desa');
+Route::get('profile-desa', [ProfileDesaController::class, 'index'])->name('profile-desa');
 
 // pages berita
 Route::prefix('kabar-desa')->group(function () {

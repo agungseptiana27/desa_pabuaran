@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\GaleriModel;
+use App\Models\StrukturOrganisasi;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Models\KabarDesaModel;
@@ -70,9 +71,16 @@ class HomeController extends Controller
             return $item;
         });
 
+        $structures = StrukturOrganisasi::with('children')
+            ->orderByRaw("CASE WHEN position LIKE '%Kepala Desa Pabuaran%' THEN 0 ELSE 1 END")
+            ->get();
+
+
+
         return view('home', compact('suratTypes', 'kabarDesa', 'galeri', 'pemasukan',
         'pengeluaran',
-        'selisih'));
+        'selisih', 'structures'));
+
     }
 
     // private function getKabarDesa()
