@@ -25,6 +25,10 @@ class BannerResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('judul')
                     ->maxLength(255),
+                Forms\Components\TextInput::make('sub_judul')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('deskripsi')
+                    ->maxLength(255),
 
                 Forms\Components\FileUpload::make('gambar')
                     ->directory('banners')
@@ -43,6 +47,8 @@ class BannerResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('gambar')->square(),
                 Tables\Columns\TextColumn::make('judul'),
+                Tables\Columns\TextColumn::make('sub_judul'),
+                Tables\Columns\TextColumn::make('deskripsi'),
                 Tables\Columns\IconColumn::make('status')->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

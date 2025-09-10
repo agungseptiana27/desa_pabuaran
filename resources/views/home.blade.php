@@ -2,7 +2,7 @@
 @section('title', 'Beranda | ' . config('app.name'))
 @section('content')
 <!-- Hero Section -->
-<section id="home">
+<!-- <section id="home">
     <div class="relative">
         <div class="h-[50vh] md:h-[70vh] lg:h-[100vh] overflow-hidden">
             <img class="w-full h-full object-cover" src="{{ asset('images/background_home3.png') }}"
@@ -23,7 +23,45 @@
 
 
     </div>
+</section> -->
+<section>
+    <div class="slider">
+        <div class="list">
+            @foreach($banners as $banner)
+                <div class="item">
+                    <img src="{{ asset('storage/' . $banner->gambar) }}" alt="{{ $banner->judul }}">
+
+                    <div class="content">
+                        <h4 class="animate-text text-2xl md:text-4xl lg:text-5xl text-white font-bold mb-2 md:mb-4">{{ $banner->judul }}</h4>
+                        <h3 class="animate-text text-2xl md:text-3xlxl lg:text-4xl text-white font-bold mb-4 md:mb-6">{{ $banner->sub_judul }}</h4>
+                        <h5 class="animate-text text-xl md:text-xl lg:text-2xl text-gray-200 mb-4 md:mb-6">{{ $banner->deskripsi }}
+                        </h5>
+                        <!-- <div class="description">
+                            {{ $banner->deskripsi ?? '' }}
+                        </div> -->
+                        <!-- <div class="button">
+                            <button>SEE MORE</button>
+                        </div> -->
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+        <div class="thumbnail">
+            @foreach($banners as $banner)
+                <div class="item">
+                    <img src="{{ asset('storage/' . $banner->gambar) }}" alt="{{ $banner->judul }}">
+                </div>
+            @endforeach
+        </div>
+
+        <div class="nextPrevArrows">
+            <button class="prev"> < </button>
+            <button class="next"> > </button>
+        </div>
+    </div>
 </section>
+
 
 <!-- Pelayanan Section -->
 <section id="pelayanan" class="py-10 md:py-16 mt-10">

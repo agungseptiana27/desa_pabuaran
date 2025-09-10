@@ -11,6 +11,8 @@ class Banner extends Model
 
     protected $fillable = [
         'judul',
+        'sub_judul',
+        'deskripsi',
         'gambar',
         'status',
     ];
