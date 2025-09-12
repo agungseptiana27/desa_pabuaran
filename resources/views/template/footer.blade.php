@@ -17,9 +17,9 @@
                         Membangun masa depan desa dengan semangat gotong royong, inovasi, dan keberlanjutan.
                     </p>
                     <div class="flex items-center space-x-4">
-                        <a href="" class="text-white hover:text-sky-400 transition duration-300">
+                        <!-- <a href="" class="text-white hover:text-sky-400 transition duration-300">
                             <i class="uil uil-facebook-f text-2xl"></i>
-                        </a>
+                        </a> -->
                         <a href="https://www.instagram.com/pemdes_pabuaran_maju_selalu" class="text-white hover:text-sky-400 transition duration-300">
                             <i class="uil uil-instagram text-2xl"></i>
                         </a>
@@ -55,17 +55,17 @@
                 <h3 class="text-xl font-bold mb-6">Hubungi Kami</h3>
                 <ul class="space-y-3">
                     <li class="flex items-center">
-                        <i class="uil uil-map-marker mr-3 text-sky-400"></i>
-                        <span class="text-gray-300">Pabuaran, Kec. Pabuaran, Kabupaten Subang, Jawa Barat 45258</span>
+                        <i class="uil uil-map-marker mr-3 text-white"></i>
+                        <span class="text-gray-300">Kp. Bojongloa, Desa Pabuaran, Kec. Pabuaran, Kabupaten Subang, Provinsi Jawa Barat 41262</span>
                     </li>
-                    <li class="flex items-center">
+                    <!-- <li class="flex items-center">
                         <i class="uil uil-phone mr-3 text-sky-400"></i>
                         <span class="text-gray-300">+62 896-1963-1700</span>
                     </li>
                     <li class="flex items-center">
                         <i class="uil uil-envelope mr-3 text-sky-400"></i>
                         <span class="text-gray-300">pemerintah@desapabuaran.id</span>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>

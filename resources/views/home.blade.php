@@ -1,29 +1,21 @@
 @extends('template.layout')
 @section('title', 'Beranda | ' . config('app.name'))
 @section('content')
-<!-- Hero Section -->
-<!-- <section id="home">
-    <div class="relative">
-        <div class="h-[50vh] md:h-[70vh] lg:h-[100vh] overflow-hidden">
-            <img class="w-full h-full object-cover" src="{{ asset('images/background_home3.png') }}"
-                alt="Background Hero">
-        </div>
-        <div class="absolute inset-0 bg-black opacity-60"></div>
-        <div class="absolute inset-0 flex flex-col items-start justify-center px-6 md:px-12 lg:px-20 ml-12">
-            <h1 class="animate-text text-2xl md:text-4xl lg:text-5xl text-white font-bold mb-2 md:mb-4 ">
-                Selamat Datang!
-            </h1>
-            <h1 class="animate-text text-2xl md:text-4xl lg:text-5xl text-white font-bold mb-4 md:mb-6">
-                Di Website Resmi Desa Pabuaran
-            </h1>
-            <h1 class="animate-text text-xl md:text-xl lg:text-2xl text-gray-200 mb-4 md:mb-6">
-                Mewujudkan Desa Pabuaran yang Transparan, Informatif, dan Bersahabat.
-            </h1>
-        </div>
 
+@section('style')
 
-    </div>
-</section> -->
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+    overflow-x: hidden;
+    width: 100%;
+    }
+</style>
+
+@endsection
 <section>
     <div class="slider">
         <div class="list">

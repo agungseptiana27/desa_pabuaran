@@ -14,13 +14,13 @@
             <div class="hidden md:flex items-center">
                 <div class="ml-10 flex items-baseline space-x-4">
                     <a href="{{ route('home') }}"
-                        class="link text-white hover:text-orange-300 px-3 py-2 rounded-md text-sm font-medium">Beranda</a>
+                        class="link text-white hover:text-[#118840] px-3 py-2 rounded-md text-sm font-medium">Beranda</a>
                     <a href="#pelayanan"
-                        class="link text-white hover:text-orange-300 px-3 py-2 rounded-md text-sm font-medium">Pelayanan</a>
+                        class="link text-white hover:text-[#118840] px-3 py-2 rounded-md text-sm font-medium">Pelayanan</a>
                     <!-- DROPDOWN SIMPLE -->
                     <div class="relative group">
                         <button
-                            class="btn-link text-white hover:text-orange-300 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                            class="btn-link text-white hover:text-[#118840] px-3 py-2 rounded-md text-sm font-medium flex items-center">
                             Informasi
                             <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -40,10 +40,10 @@
                         </div>
                     </div>
                     <a href="{{ route('profile-desa') }}"
-                        class="link text-white hover:text-orange-300 px-3 py-2 rounded-md text-sm font-medium">Profil
+                        class="link text-white hover:text-[#118840] px-3 py-2 rounded-md text-sm font-medium">Profil
                         Desa</a>
                     <a href="{{ route('pengaduan.create') }}"
-                        class="link text-white hover:text-orange-300 px-3 py-2 rounded-md text-sm font-medium">Pengaduan</a>
+                        class="link text-white hover:text-[#118840] px-3 py-2 rounded-md text-sm font-medium">Pengaduan</a>
                 </div>
                 <div class="ml-6 flex items-center">
                     @if (Route::has('login'))
@@ -174,9 +174,9 @@
             <div class="guest-user">
                 <div class="flex flex-col space-y-2 px-5">
                     <a href="{{ route('login') }}"
-                        class="block px-4 py-2 text-base font-medium text-gray-800 border border-gray-500 rounded-md hover:text-orange-300 hover:border-orange-300 text-center transition-colors duration-200">Masuk</a>
+                        class="block px-4 py-2 text-base font-medium text-gray-800 border border-gray-500 rounded-md hover:text-[#118840] hover:border-[#118840] text-center transition-colors duration-200">Masuk</a>
                     <a href="{{ route('register') }}"
-                        class="block px-4 py-2 text-base font-medium text-white bg-orange-400 hover:bg-orange-500 rounded-md text-center transition-colors duration-200">Daftar</a>
+                        class="block px-4 py-2 text-base font-medium text-white bg-[#118840] hover:bg-green-900 rounded-md text-center transition-colors duration-200">Daftar</a>
                 </div>
             </div>
             @endauth
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     btn.classList.remove('text-white');
                     btn.classList.add('text-gray-800');
                     btn.classList.remove('hover:bg-white')
-                    btn.classList.add('hover:bg-orange-400')
+                    btn.classList.add('hover:bg-[#118840]')
                 });
             }
 
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     btn.classList.add('text-white');
                     btn.classList.remove('text-gray-800');
                     btn.classList.add('hover:bg-white')
-                    btn.classList.remove('hover:bg-orange-400')
+                    btn.classList.remove('hover:bg-[#118840]')
                 });
             }
 
